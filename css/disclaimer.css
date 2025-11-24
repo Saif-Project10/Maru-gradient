@@ -1,0 +1,255 @@
+/* disclaimer.css - GRADIENT VERSION (Updated) */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap');
+
+:root {
+  /* Dark Theme Variables */
+  --bg-color: #0b0b0b;
+  --text-color: #ffffff;
+  --accent: #ffd700;
+  --link-color: #ffeb9a;
+  --card-bg: #1a1a1a;
+  --card-border: rgba(255, 215, 0, 0.3);
+  --text-color-dark: #ffec9e;
+  --text-color-soft: #aaa;
+  
+  /* Dark Theme Gradients */
+  --gradient-primary: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+  --gradient-secondary: linear-gradient(135deg, #c28b2a 0%, #e6b450 100%);
+  --gradient-dark: linear-gradient(135deg, #0b0b0b 0%, #1a1a1a 100%);
+  --gradient-card: linear-gradient(135deg, rgba(255,215,0,0.15) 0%, rgba(255,255,255,0.05) 100%);
+  --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.03) 100%);
+  --gradient-gold-text: linear-gradient(45deg, #ffec9e, #e2b44c, #c28b2a);
+  --gradient-button: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+}
+
+.light-mode {
+  /* Light Theme Variables */
+  --bg-color: #faf6e8;
+  --text-color: #2c2c2c;
+  --accent: #c28b2a;
+  --link-color: #a87400;
+  --card-bg: #f9f7f2;
+  --card-border: rgba(194, 139, 42, 0.3);
+  --text-color-dark: #4b3e2a;
+  --text-color-soft: #6b5f4f;
+
+  /* Light Theme Gradients */
+  --gradient-primary: linear-gradient(135deg, #c28b2a 0%, #e6b450 100%);
+  --gradient-secondary: linear-gradient(135deg, #a87400 0%, #c28b2a 100%);
+  --gradient-dark: linear-gradient(135deg, #faf6e8 0%, #f0e6d2 100%);
+  --gradient-card: linear-gradient(135deg, rgba(194,139,42,0.15) 0%, rgba(255,255,255,0.3) 100%);
+  --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.1) 100%);
+  --gradient-gold-text: linear-gradient(45deg, #c28b2a, #a87400, #8b5a00);
+  --gradient-button: linear-gradient(135deg, #c28b2a 0%, #e6b450 100%);
+}
+
+body {
+  margin: 0;
+  font-family: 'Cinzel Decorative', serif;
+  background: var(--gradient-dark);
+  color: var(--text-color);
+  transition: all 0.5s ease;
+  min-height: 100vh;
+}
+
+.disclaimer-container {
+  max-width: 900px;
+  margin: 80px auto;
+  background: var(--gradient-card);
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  border-radius: 20px;
+  border: 2px solid var(--card-border);
+  box-shadow: 0 8px 32px rgba(255, 215, 0, 0.15);
+  line-height: 1.7;
+  transition: all 0.5s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.disclaimer-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.1), transparent);
+  transition: left 0.6s;
+}
+
+.disclaimer-container:hover::before {
+  left: 100%;
+}
+
+.disclaimer-container:hover {
+  box-shadow: 0 12px 40px rgba(255, 215, 0, 0.25);
+  transform: translateY(-5px);
+  border-color: rgba(255, 215, 0, 0.4);
+}
+
+.disclaimer-container h1 {
+  font-size: 3rem;
+  background: var(--gradient-gold-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-align: center;
+  margin-bottom: 30px;
+  text-shadow: 0 2px 10px rgba(255, 215, 0, 0.3);
+}
+
+.disclaimer-container h2 {
+  font-size: 1.6rem;
+  background: var(--gradient-gold-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+.disclaimer-container p {
+  font-size: 1.1rem;
+  color: var(--text-color-soft);
+  margin-bottom: 18px;
+}
+
+.disclaimer-container p strong {
+  color: var(--accent);
+}
+
+.disclaimer-container .last-updated {
+  text-align: center;
+  margin-top: 50px;
+  font-style: italic;
+  color: var(--text-color-soft);
+  opacity: 0.8;
+}
+
+/* ==================================
+   COMPLETE RESPONSIVE MEDIA QUERIES
+   ================================== */
+
+/* Tablet Devices (768px - 1024px) */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .disclaimer-container {
+    margin: 60px 30px;
+    padding: 35px;
+  }
+  
+  .disclaimer-container h1 {
+    font-size: 2.5rem;
+  }
+  
+  .disclaimer-container h2 {
+    font-size: 1.4rem;
+  }
+  
+  .disclaimer-container p {
+    font-size: 1.05rem;
+  }
+}
+
+/* Mobile Devices (768px and below) */
+@media (max-width: 768px) {
+  .disclaimer-container {
+    margin: 50px 20px;
+    padding: 25px;
+  }
+  
+  .disclaimer-container h1 {
+    font-size: 2.2rem;
+  }
+  
+  .disclaimer-container h2 {
+    font-size: 1.3rem;
+  }
+  
+  .disclaimer-container p {
+    font-size: 1rem;
+  }
+}
+
+/* Small Mobile Devices (480px and below) */
+@media (max-width: 480px) {
+  .disclaimer-container {
+    margin: 40px 15px;
+    padding: 20px;
+    line-height: 1.6;
+  }
+  
+  .disclaimer-container h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  
+  .disclaimer-container h2 {
+    font-size: 1.1rem;
+    margin-top: 20px;
+    margin-bottom: 12px;
+  }
+  
+  .disclaimer-container p {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+  }
+  
+  .disclaimer-container .last-updated {
+    margin-top: 40px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Extra Small Devices (360px and below) */
+@media (max-width: 360px) {
+  .disclaimer-container {
+    margin: 30px 10px;
+    padding: 15px;
+    line-height: 1.5;
+  }
+  
+  .disclaimer-container h1 {
+    font-size: 1.6rem;
+  }
+  
+  .disclaimer-container h2 {
+    font-size: 1rem;
+    margin-top: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .disclaimer-container p {
+    font-size: 0.85rem;
+    margin-bottom: 12px;
+  }
+  
+  .disclaimer-container .last-updated {
+    margin-top: 30px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Very Small Devices (320px and below) */
+@media (max-width: 320px) {
+  .disclaimer-container {
+    margin: 25px 8px;
+    padding: 12px;
+  }
+  
+  .disclaimer-container h1 {
+    font-size: 1.4rem;
+  }
+  
+  .disclaimer-container h2 {
+    font-size: 0.95rem;
+  }
+  
+  .disclaimer-container p {
+    font-size: 0.8rem;
+  }
+  
+  .disclaimer-container .last-updated {
+    font-size: 0.8rem;
+  }
+}

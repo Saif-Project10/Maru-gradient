@@ -1,0 +1,468 @@
+/* offers.css - GRADIENT VERSION (Replacement File) */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap');
+
+:root {
+  /* Dark Theme Variables */
+  --bg-color: #0b0b0b;
+  --text-color: #ffffff;
+  --accent: #ffd700;
+  --link-color: #ffeb9a;
+  --card-bg: #1a1a1a;
+  --card-border: rgba(255, 215, 0, 0.3);
+  --text-color-dark: #ffec9e;
+  --text-color-soft: #aaa;
+
+  /* Dark Theme Gradients */
+  --gradient-primary: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+  --gradient-secondary: linear-gradient(135deg, #c28b2a 0%, #e6b450 100%);
+  --gradient-dark: linear-gradient(135deg, #0b0b0b 0%, #1a1a1a 100%);
+  --gradient-card: linear-gradient(135deg, rgba(255,215,0,0.15) 0%, rgba(255,255,255,0.05) 100%);
+  --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.03) 100%);
+  --gradient-gold-text: linear-gradient(45deg, #ffec9e, #e2b44c, #c28b2a);
+  --gradient-button: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+}
+
+.light-mode {
+  /* Light Theme Variables */
+  --bg-color: #faf6e8;
+  --text-color: #2c2c2c;
+  --accent: #c28b2a;
+  --link-color: #a87400;
+  --card-bg: #f9f7f2;
+  --card-border: rgba(194, 139, 42, 0.3);
+  --text-color-dark: #4b3e2a;
+  --text-color-soft: #6b5f4f;
+
+  /* Light Theme Gradients */
+  --gradient-primary: linear-gradient(135deg, #c28b2a 0%, #e6b450 100%);
+  --gradient-secondary: linear-gradient(135deg, #a87400 0%, #c28b2a 100%);
+  --gradient-dark: linear-gradient(135deg, #faf6e8 0%, #f0e6d2 100%);
+  --gradient-card: linear-gradient(135deg, rgba(194,139,42,0.15) 0%, rgba(255,255,255,0.3) 100%);
+  --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.1) 100%);
+  --gradient-gold-text: linear-gradient(45deg, #c28b2a, #a87400, #8b5a00);
+  --gradient-button: linear-gradient(135deg, #c28b2a 0%, #e6b450 100%);
+}
+
+/* Offers Section */
+.offers-section {
+  padding: 80px 20px;
+  text-align: center;
+  background: var(--gradient-dark);
+}
+
+.offers-section h2 {
+  background: var(--gradient-gold-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 2.5em;
+  margin-bottom: 50px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* Offers Container */
+.offers-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Offer Cards */
+.offer-card {
+  background: var(--gradient-card);
+  backdrop-filter: blur(5px);
+  border-radius: 15px;
+  border: 2px solid var(--card-border);
+  box-shadow: 0 8px 20px rgba(255, 215, 0, 0.2);
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.offer-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.offer-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(255, 215, 0, 0.3);
+}
+
+.offer-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.offer-card h3 {
+  background: var(--gradient-gold-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+
+.offer-card p {
+  font-size: 1em;
+  color: var(--text-color-soft);
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+/* CTA Button */
+.cta-button {
+  padding: 12px 25px;
+  background: var(--gradient-button);
+  color: var(--bg-color);
+  font-weight: 600;
+  border-radius: 25px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: center;
+}
+
+.cta-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);
+}
+
+.light-mode .cta-button:hover {
+  box-shadow: 0 4px 12px rgba(194, 139, 42, 0.3);
+}
+
+/* Popup Styles (Same as gifting.css but optimized for offers) */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  backdrop-filter: blur(4px);
+  animation: fadeIn 0.4s ease;
+}
+
+.popup {
+  background: var(--gradient-card);
+  backdrop-filter: blur(10px);
+  color: var(--text-color);
+  width: 90%;
+  max-width: 480px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+  border: 1px solid var(--card-border);
+  transform: scale(0.95);
+  transition: all 0.35s ease;
+  position: relative;
+}
+
+.popup.show {
+  transform: scale(1);
+}
+
+/* Animated Golden Border */
+.popup::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 2px;
+  background: var(--gradient-primary);
+  background-size: 300% 300%;
+  animation: borderGlow 4s linear infinite;
+  -webkit-mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events: none;
+}
+
+@keyframes borderGlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Close Button */
+.close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: var(--gradient-glass);
+  color: var(--accent);
+  border: 1px solid var(--card-border);
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.close:hover {
+  background: var(--gradient-primary);
+  color: var(--bg-color);
+  box-shadow: 0 0 12px var(--accent);
+  transform: scale(1.1);
+}
+
+/* Popup Image */
+.popup-image {
+  position: relative;
+  z-index: 1;
+  width: 95%;
+  height: 220px;
+  margin: 18px auto 12px auto;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.45);
+}
+
+.popup-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.popup-image img:hover {
+  transform: scale(1.05);
+}
+
+/* Popup Details */
+.popup-details {
+  padding: 18px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.popup-details h2 {
+  background: var(--gradient-gold-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.popup-details p {
+  font-size: 0.95rem;
+  color: var(--text-color-soft);
+  line-height: 1.6;
+}
+
+/* Price Section */
+.popup-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+  gap: 10px;
+}
+
+.popup-price-section .current-price {
+  background: var(--gradient-gold-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.popup-price-section .old-price {
+  font-size: 1rem;
+  color: var(--text-color-soft);
+  text-decoration: line-through;
+}
+
+/* Enhanced Dropdown */
+.popup-size-selector select {
+  width: 100%;
+  padding: 12px 18px;
+  border-radius: 30px;
+  border: 1px solid var(--card-border);
+  background: var(--gradient-glass);
+  color: var(--accent);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.6), 0 0 8px rgba(255,204,0,0.15);
+}
+
+.popup-size-selector select:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 10px rgba(255, 204, 0, 0.35);
+}
+
+.popup-size-selector select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 12px rgba(255, 204, 0, 0.45);
+}
+
+/* Quantity Control */
+.popup-quantity-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0 15px 0;
+  gap: 10px;
+}
+
+.popup-quantity-control button {
+  background: var(--gradient-button);
+  color: var(--bg-color);
+  border: none;
+  font-size: 1.2rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+.popup-quantity-control button:hover {
+  transform: scale(1.1);
+}
+
+.popup-quantity-control input {
+  width: 50px;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid var(--card-border);
+  background: var(--gradient-glass);
+  color: var(--text-color);
+  font-size: 1rem;
+  padding: 5px;
+}
+
+/* Add to Cart Button */
+.popup-actions {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+#addToCartBtn {
+  background: var(--gradient-button);
+  color: var(--bg-color);
+  border-radius: 25px;
+  border: none;
+  padding: 12px 38px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.4);
+}
+
+#addToCartBtn:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.6);
+}
+
+.light-mode #addToCartBtn:hover {
+  box-shadow: 0 6px 20px rgba(194, 139, 42, 0.6);
+}
+
+/* Cart Modal (Same as gifting.css) */
+.cart-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 3000;
+  backdrop-filter: blur(4px);
+  animation: fadeIn 0.4s ease;
+}
+
+.cart-modal {
+  background: var(--gradient-card);
+  backdrop-filter: blur(10px);
+  color: var(--text-color);
+  width: 90%;
+  max-width: 500px;
+  padding: 35px 28px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.12);
+  border: 1px solid var(--card-border);
+  transform: scale(0.9);
+  opacity: 0;
+  animation: popupIn 0.4s forwards;
+  text-align: center;
+}
+
+/* Basic Mobile Responsive */
+@media (max-width: 1000px) {
+  .offer-card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 600px) {
+  .offer-card {
+    width: 90%;
+  }
+  
+  .offers-section {
+    padding: 60px 15px;
+  }
+  
+  .offers-section h2 {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 500px) {
+  .popup-top {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .popup-quantity-control input {
+    width: 40px;
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
+  height: 100%;
+}
