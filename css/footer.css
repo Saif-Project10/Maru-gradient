@@ -1,45 +1,7 @@
 /* footer.css - GRADIENT VERSION (Replacement File) */
 @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap');
 
-:root {
-  /* Dark Theme Variables */
-  --bg-color: #0b0b0b;
-  --text-color: #ffffff;
-  --accent: #ffd700;
-  --link-color: #ffeb9a;
-  --card-bg: #1a1a1a;
-  --card-border: rgba(255, 215, 0, 0.3);
-  --text-color-soft: #aaa;
 
-  /* Dark Theme Gradients */
-  --gradient-primary: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
-  --gradient-secondary: linear-gradient(135deg, #c28b2a 0%, #e6b450 100%);
-  --gradient-dark: linear-gradient(135deg, #0b0b0b 0%, #1a1a1a 100%);
-  --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.03) 100%);
-  --gradient-card: linear-gradient(135deg, rgba(255,215,0,0.15) 0%, rgba(255,255,255,0.05) 100%);
-  --gradient-gold-text: linear-gradient(45deg, #ffec9e, #e2b44c, #c28b2a);
-  --gradient-footer: linear-gradient(135deg, #0b0b0b 0%, #1a1a1a 100%);
-}
-
-.light-mode {
-  /* Light Theme Variables */
-  --bg-color: #faf6e8;
-  --text-color: #2c2c2c;
-  --accent: #c28b2a;
-  --link-color: #a87400;
-  --card-bg: #f9f7f2;
-  --card-border: rgba(194, 139, 42, 0.3);
-  --text-color-soft: #6b5f4f;
-
-  /* Light Theme Gradients */
-  --gradient-primary: linear-gradient(135deg, #c28b2a 0%, #e6b450 100%);
-  --gradient-secondary: linear-gradient(135deg, #a87400 0%, #c28b2a 100%);
-  --gradient-dark: linear-gradient(135deg, #faf6e8 0%, #f0e6d2 100%);
-  --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.1) 100%);
-  --gradient-card: linear-gradient(135deg, rgba(194,139,42,0.15) 0%, rgba(255,255,255,0.3) 100%);
-  --gradient-gold-text: linear-gradient(45deg, #c28b2a, #a87400, #8b5a00);
-  --gradient-footer: linear-gradient(135deg, #faf6e8 0%, #f0e6d2 100%);
-}
 
 /* Luxury Footer */
 .luxury-footer {

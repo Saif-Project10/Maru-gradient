@@ -1,37 +1,7 @@
 /* header.css - GRADIENT VERSION (Replacement File) */
 @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap');
 
-:root {
-  /* Dark Theme Variables */
-  --bg-color: #0b0b0b;
-  --text-color: #ffffff;
-  --accent: #ffd700;
-  --link-color: #ffeb9a;
-  
-  /* Dark Theme Gradients */
-  --gradient-primary: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
-  --gradient-secondary: linear-gradient(135deg, #c28b2a 0%, #e6b450 100%);
-  --gradient-dark: linear-gradient(135deg, #0b0b0b 0%, #1a1a1a 100%);
-  --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.03) 100%);
-  --gradient-gold-text: linear-gradient(45deg, #ffec9e, #e2b44c, #c28b2a);
-  --gradient-header-bg: linear-gradient(135deg, rgba(11,11,11,0.95) 0%, rgba(26,26,26,0.9) 100%);
-}
 
-.light-mode {
-  /* Light Theme Variables */
-  --bg-color: #faf6e8;
-  --text-color: #2c2c2c;
-  --accent: #c28b2a;
-  --link-color: #a87400;
-
-  /* Light Theme Gradients */
-  --gradient-primary: linear-gradient(135deg, #c28b2a 0%, #e6b450 100%);
-  --gradient-secondary: linear-gradient(135deg, #a87400 0%, #c28b2a 100%);
-  --gradient-dark: linear-gradient(135deg, #faf6e8 0%, #f0e6d2 100%);
-  --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.1) 100%);
-  --gradient-gold-text: linear-gradient(45deg, #c28b2a, #a87400, #8b5a00);
-  --gradient-header-bg: linear-gradient(135deg, rgba(250,246,232,0.95) 0%, rgba(240,230,210,0.9) 100%);
-}
 
 /* Header with Background Image */
 .luxury-header.with-bg-image {
